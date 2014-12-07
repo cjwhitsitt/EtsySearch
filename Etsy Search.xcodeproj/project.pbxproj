@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8130206F1A34F1F900D3321A /* EtsyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8130206E1A34F1F900D3321A /* EtsyClient.m */; };
+		813020721A34F21F00D3321A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 813020711A34F21F00D3321A /* Constants.m */; };
 		815CB0AC1A34F0FA00E68F21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0AB1A34F0FA00E68F21 /* main.m */; };
 		815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0AE1A34F0FA00E68F21 /* AppDelegate.m */; };
 		815CB0B21A34F0FA00E68F21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0B11A34F0FA00E68F21 /* ViewController.m */; };
@@ -27,6 +29,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8130206D1A34F1F900D3321A /* EtsyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EtsyClient.h; path = "API Clients/EtsyClient.h"; sourceTree = "<group>"; };
+		8130206E1A34F1F900D3321A /* EtsyClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EtsyClient.m; path = "API Clients/EtsyClient.m"; sourceTree = "<group>"; };
+		813020701A34F21F00D3321A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		813020711A34F21F00D3321A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		815CB0A61A34F0FA00E68F21 /* Etsy Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Etsy Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815CB0AA1A34F0FA00E68F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815CB0AB1A34F0FA00E68F21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -60,6 +66,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8130206B1A34F1D700D3321A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				815CB0B01A34F0FA00E68F21 /* ViewController.h */,
+				815CB0B11A34F0FA00E68F21 /* ViewController.m */,
+				815CB0B31A34F0FA00E68F21 /* Main.storyboard */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8130206C1A34F1DE00D3321A /* API Clients */ = {
+			isa = PBXGroup;
+			children = (
+				8130206D1A34F1F900D3321A /* EtsyClient.h */,
+				8130206E1A34F1F900D3321A /* EtsyClient.m */,
+			);
+			name = "API Clients";
+			sourceTree = "<group>";
+		};
 		815CB09D1A34F0FA00E68F21 = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +108,8 @@
 			children = (
 				815CB0AD1A34F0FA00E68F21 /* AppDelegate.h */,
 				815CB0AE1A34F0FA00E68F21 /* AppDelegate.m */,
-				815CB0B01A34F0FA00E68F21 /* ViewController.h */,
-				815CB0B11A34F0FA00E68F21 /* ViewController.m */,
-				815CB0B31A34F0FA00E68F21 /* Main.storyboard */,
+				8130206C1A34F1DE00D3321A /* API Clients */,
+				8130206B1A34F1D700D3321A /* View Controllers */,
 				815CB0B61A34F0FA00E68F21 /* Images.xcassets */,
 				815CB0B81A34F0FA00E68F21 /* LaunchScreen.xib */,
 				815CB0A91A34F0FA00E68F21 /* Supporting Files */,
@@ -97,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				815CB0AA1A34F0FA00E68F21 /* Info.plist */,
+				813020701A34F21F00D3321A /* Constants.h */,
+				813020711A34F21F00D3321A /* Constants.m */,
 				815CB0AB1A34F0FA00E68F21 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -219,9 +245,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				813020721A34F21F00D3321A /* Constants.m in Sources */,
 				815CB0B21A34F0FA00E68F21 /* ViewController.m in Sources */,
 				815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */,
 				815CB0AC1A34F0FA00E68F21 /* main.m in Sources */,
+				8130206F1A34F1F900D3321A /* EtsyClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +440,7 @@
 				815CB0CB1A34F0FA00E68F21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		815CB0CC1A34F0FA00E68F21 /* Build configuration list for PBXNativeTarget "Etsy SearchTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +449,7 @@
 				815CB0CE1A34F0FA00E68F21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
