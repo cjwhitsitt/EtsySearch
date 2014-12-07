@@ -11,11 +11,11 @@
 		813020721A34F21F00D3321A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 813020711A34F21F00D3321A /* Constants.m */; };
 		815CB0AC1A34F0FA00E68F21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0AB1A34F0FA00E68F21 /* main.m */; };
 		815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0AE1A34F0FA00E68F21 /* AppDelegate.m */; };
-		815CB0B21A34F0FA00E68F21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0B11A34F0FA00E68F21 /* ViewController.m */; };
 		815CB0B51A34F0FA00E68F21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815CB0B31A34F0FA00E68F21 /* Main.storyboard */; };
 		815CB0B71A34F0FA00E68F21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815CB0B61A34F0FA00E68F21 /* Images.xcassets */; };
 		815CB0BA1A34F0FA00E68F21 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815CB0B81A34F0FA00E68F21 /* LaunchScreen.xib */; };
 		815CB0C61A34F0FA00E68F21 /* Etsy_SearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0C51A34F0FA00E68F21 /* Etsy_SearchTests.m */; };
+		81B597AC1A3518260098ADF3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B597AB1A3518260098ADF3 /* SearchViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,14 +38,14 @@
 		815CB0AB1A34F0FA00E68F21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		815CB0AD1A34F0FA00E68F21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815CB0AE1A34F0FA00E68F21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		815CB0B01A34F0FA00E68F21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		815CB0B11A34F0FA00E68F21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		815CB0B41A34F0FA00E68F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		815CB0B61A34F0FA00E68F21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		815CB0B91A34F0FA00E68F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		815CB0BF1A34F0FA00E68F21 /* Etsy SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Etsy SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815CB0C41A34F0FA00E68F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815CB0C51A34F0FA00E68F21 /* Etsy_SearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Etsy_SearchTests.m; sourceTree = "<group>"; };
+		81B597AA1A3518260098ADF3 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = "View Controllers/SearchViewController.h"; sourceTree = "<group>"; };
+		81B597AB1A3518260098ADF3 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = "View Controllers/SearchViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,9 +69,9 @@
 		8130206B1A34F1D700D3321A /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				815CB0B01A34F0FA00E68F21 /* ViewController.h */,
-				815CB0B11A34F0FA00E68F21 /* ViewController.m */,
 				815CB0B31A34F0FA00E68F21 /* Main.storyboard */,
+				81B597AA1A3518260098ADF3 /* SearchViewController.h */,
+				81B597AB1A3518260098ADF3 /* SearchViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -246,8 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				813020721A34F21F00D3321A /* Constants.m in Sources */,
-				815CB0B21A34F0FA00E68F21 /* ViewController.m in Sources */,
 				815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */,
+				81B597AC1A3518260098ADF3 /* SearchViewController.m in Sources */,
 				815CB0AC1A34F0FA00E68F21 /* main.m in Sources */,
 				8130206F1A34F1F900D3321A /* EtsyClient.m in Sources */,
 			);
