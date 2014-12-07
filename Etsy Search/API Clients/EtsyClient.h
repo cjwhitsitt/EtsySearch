@@ -8,6 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol EtsyClientDelegate <NSObject>
+
+- (void)resultsReturned;
+- (void)errorGettingResults;
+
+@end
+
 @interface EtsyClient : NSObject
+
+- (void)getResultsForKeyword:(NSString *)keyword;
+- (void)nextPage;
 
 @end

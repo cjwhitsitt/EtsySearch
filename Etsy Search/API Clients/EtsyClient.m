@@ -10,4 +10,18 @@
 
 @implementation EtsyClient
 
+- (void)getResultsForKeyword:(NSString *)keyword
+{
+    // prepare the request
+    
+    // success/failure
+    
+    // make the request
+}
+
+- (void)nextPage
+{
+    
+}
+
 @end

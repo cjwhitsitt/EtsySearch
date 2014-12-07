@@ -10,4 +10,18 @@
 
 @interface Constants : NSObject
 
+#pragma mark - Etsy API
+extern NSString * const kEtsyAPIDomain;
+extern NSString * const kEtsyAPIEndpointActiveListings;
+
+extern NSString * const kEtsyAPIParameterAPIKey;
+extern NSString * const kEtsyAPIParameterIncludes;
+extern NSString * const kEtsyAPIParameterKeywords;
+extern NSString * const kEtsyAPIValueMainImage;
+
+extern NSString * const kEtsyKeystring;
+extern NSString * const kEtsySharedSecret;
+
+extern int const kEtsyResultsPerPage;
+
 @end
