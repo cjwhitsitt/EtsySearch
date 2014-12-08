@@ -16,6 +16,8 @@
 		815CB0C61A34F0FA00E68F21 /* Etsy_SearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0C51A34F0FA00E68F21 /* Etsy_SearchTests.m */; };
 		81B597B31A351E960098ADF3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B597B11A351E960098ADF3 /* SearchViewController.m */; };
 		81B597B41A351E960098ADF3 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B597B21A351E960098ADF3 /* SearchViewController.xib */; };
+		81B597BD1A35320A0098ADF3 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */; };
+		81B597BE1A35320A0098ADF3 /* ResultsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,9 @@
 		81B597B01A351E960098ADF3 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = "View Controllers/SearchViewController.h"; sourceTree = "<group>"; };
 		81B597B11A351E960098ADF3 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = "View Controllers/SearchViewController.m"; sourceTree = "<group>"; };
 		81B597B21A351E960098ADF3 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = "View Controllers/SearchViewController.xib"; sourceTree = "<group>"; };
+		81B597BA1A35320A0098ADF3 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsTableViewController.h; path = "View Controllers/ResultsTableViewController.h"; sourceTree = "<group>"; };
+		81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsTableViewController.m; path = "View Controllers/ResultsTableViewController.m"; sourceTree = "<group>"; };
+		81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultsTableViewController.xib; path = "View Controllers/ResultsTableViewController.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +77,9 @@
 				81B597B01A351E960098ADF3 /* SearchViewController.h */,
 				81B597B11A351E960098ADF3 /* SearchViewController.m */,
 				81B597B21A351E960098ADF3 /* SearchViewController.xib */,
+				81B597BA1A35320A0098ADF3 /* ResultsTableViewController.h */,
+				81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */,
+				81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -225,6 +233,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B597BE1A35320A0098ADF3 /* ResultsTableViewController.xib in Resources */,
 				815CB0BA1A34F0FA00E68F21 /* LaunchScreen.xib in Resources */,
 				815CB0B71A34F0FA00E68F21 /* Images.xcassets in Resources */,
 				81B597B41A351E960098ADF3 /* SearchViewController.xib in Resources */,
@@ -247,6 +256,7 @@
 			files = (
 				813020721A34F21F00D3321A /* Constants.m in Sources */,
 				815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */,
+				81B597BD1A35320A0098ADF3 /* ResultsTableViewController.m in Sources */,
 				815CB0AC1A34F0FA00E68F21 /* main.m in Sources */,
 				81B597B31A351E960098ADF3 /* SearchViewController.m in Sources */,
 				8130206F1A34F1F900D3321A /* EtsyClient.m in Sources */,
