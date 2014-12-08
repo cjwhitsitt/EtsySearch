@@ -6,10 +6,6 @@
 //  Copyright (c) 2014 Jay Whitsitt. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
-@interface Constants : NSObject
-
 #pragma mark - Etsy API
 extern NSString * const kEtsyAPIDomain;
 extern NSString * const kEtsyAPIEndpointActiveListings;
@@ -23,5 +19,3 @@ extern NSString * const kEtsyKeystring;
 extern NSString * const kEtsySharedSecret;
 
 extern int const kEtsyResultsPerPage;
-
-@end

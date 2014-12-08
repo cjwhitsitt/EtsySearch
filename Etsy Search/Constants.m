@@ -8,12 +8,10 @@
 
 #import "Constants.h"
 
-@implementation Constants
-
 #pragma mark - Etsy API
 // https://api.etsy.com/v2/listings/active?api_key=&includes=MainImage&keywords=
 NSString * const kEtsyAPIDomain = @"https://api.etsy.com";
-NSString * const kEtsyAPIEndpointActiveListings = @"v2/listings/active";
+NSString * const kEtsyAPIEndpointActiveListings = @"/v2/listings/active";
 
 NSString * const kEtsyAPIParameterAPIKey = @"api_key";
 NSString * const kEtsyAPIParameterIncludes = @"includes";
@@ -24,5 +22,3 @@ NSString * const kEtsyKeystring = @"z0vntfta51kksj6x13hr007f";
 NSString * const kEtsySharedSecret = @"g1sj8few3m";
 
 int const kEtsyResultsPerPage = 25;
-
-@end

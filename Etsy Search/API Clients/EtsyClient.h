@@ -18,24 +18,24 @@
 @end
 
 
-@interface EtsyResult : NSObject
+@interface EtsyListing : NSObject
 
-@property (nonatomic, assign) NSInteger *listingID;
+@property (nonatomic) NSInteger listingID;
 @property (nonatomic, strong) NSString *state;
-@property (nonatomic, assign) NSInteger *userID;
-@property (nonatomic, assign) NSInteger *categoryID;
+@property (nonatomic) NSInteger userID;
+@property (nonatomic) NSInteger categoryID;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *resultDescription;
 @property (nonatomic, strong) NSDate *endingDate;
 @property (nonatomic, strong) NSString *price;
 @property (nonatomic, strong) NSString *currency;
-@property (nonatomic, assign) NSInteger *quantity;
+@property (nonatomic) NSInteger quantity;
 @property (nonatomic, strong) NSArray *categoryPath;
 @property (nonatomic, strong) NSArray *materials;
 @property (nonatomic, strong) NSString *url;
-@property (nonatomic, assign) BOOL *isCustomizable;
-@property (nonatomic, assign) BOOL *isDigital;
-@property (nonatomic, assign) BOOL *hasVariations;
+@property (nonatomic) BOOL isCustomizable;
+@property (nonatomic) BOOL isDigital;
+@property (nonatomic) BOOL hasVariations;
 
 @end
 
@@ -44,11 +44,11 @@
 
 @property (nonatomic, weak) id<EtsyClientDelegate> delegate;
 
-@property (nonatomic, assign) NSInteger *totalResults;
-@property (nonatomic, assign) NSInteger *resultsDownloaded;
-@property (nonatomic, strong) NSArray *results; // Array of EtsyResult objects
+@property (nonatomic) NSInteger totalListings;
+@property (nonatomic) NSInteger listingsDownloaded;
+@property (nonatomic, strong) NSArray *listings; // Array of EtsyListing objects
 
-- (void)getResultsForKeyword:(NSString *)keyword;
+- (void)getResultsForKeywords:(NSString *)keywords;
 - (void)nextPage;
 
 @end

@@ -39,9 +39,14 @@
 - (IBAction)search
 {
     // start the search
+    EtsyClient *etsyClient = [[EtsyClient alloc] init];
+    etsyClient.delegate = self;
+    
+    NSString *searchString = [self.searchField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    [etsyClient getResultsForKeywords:searchString];
     
     // when results are returned, show the new nib
-    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,12 +58,15 @@
 
 - (void)etsyResultsReturned:(EtsyClient *)etsyClient
 {
+    // give the client to the new results nib
+    
+    // present the nib
     
 }
 
 - (void)errorGettingEtsyResults:(EtsyClient *)etsyClient
 {
-    
+    // tell the user
 }
 
 @end
