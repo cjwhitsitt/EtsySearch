@@ -10,6 +10,9 @@
 
 @interface SearchViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *searchField;
+@property (weak, nonatomic) IBOutlet UIButton *searchButton;
+
 @end
 
 @implementation SearchViewController
@@ -19,6 +22,24 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"Etsy Search";
+}
+
+- (IBAction)keywordsChanged:(UITextField *)sender
+{
+    NSString *searchString = [sender.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    if ([searchString isEqualToString:@""]) {
+        self.searchButton.enabled = NO;
+    } else {
+        self.searchButton.enabled = YES;
+    }
+}
+
+- (IBAction)search
+{
+    // start the search
+    
+    // when results are returned, show the new nib
+    
 }
 
 - (void)didReceiveMemoryWarning {
