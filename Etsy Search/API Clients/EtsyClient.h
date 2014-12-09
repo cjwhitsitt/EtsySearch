@@ -14,6 +14,7 @@
 
 - (void)etsyResultsReturned:(EtsyClient *)etsyClient;
 - (void)errorGettingEtsyResults:(EtsyClient *)etsyClient;
+- (void)noEtsyResults:(EtsyClient *)etsyClient;
 
 @end
 
@@ -21,21 +22,11 @@
 @interface EtsyListing : NSObject
 
 @property (nonatomic) NSInteger listingID;
-@property (nonatomic, strong) NSString *state;
-@property (nonatomic) NSInteger userID;
-@property (nonatomic) NSInteger categoryID;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *resultDescription;
-@property (nonatomic, strong) NSDate *endingDate;
 @property (nonatomic, strong) NSString *price;
-@property (nonatomic, strong) NSString *currency;
-@property (nonatomic) NSInteger quantity;
-@property (nonatomic, strong) NSArray *categoryPath;
-@property (nonatomic, strong) NSArray *materials;
 @property (nonatomic, strong) NSString *url;
-@property (nonatomic) BOOL isCustomizable;
-@property (nonatomic) BOOL isDigital;
-@property (nonatomic) BOOL hasVariations;
+@property (nonatomic, strong) UIImage *mainImage;
 
 @end
 
@@ -47,6 +38,7 @@
 @property (nonatomic) NSInteger totalListings;
 @property (nonatomic) NSInteger listingsDownloaded;
 @property (nonatomic, strong) NSArray *listings; // Array of EtsyListing objects
+@property (nonatomic, readonly) NSString *keywords;
 
 - (void)getResultsForKeywords:(NSString *)keywords;
 - (void)nextPage;

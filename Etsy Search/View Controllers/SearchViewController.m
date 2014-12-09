@@ -9,11 +9,13 @@
 #import "SearchViewController.h"
 
 #import "EtsyClient.h"
+#import "ResultsTableViewController.h"
 
 @interface SearchViewController () <EtsyClientDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchField;
 @property (weak, nonatomic) IBOutlet UIButton *searchButton;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -24,6 +26,7 @@
     // Do any additional setup after loading the view from its nib.
     
     self.title = @"Etsy Search";
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 
 - (IBAction)keywordsChanged:(UITextField *)sender
@@ -38,6 +41,10 @@
 
 - (IBAction)search
 {
+    // block user interaction
+    [self.view endEditing:YES];
+    [self pauseInteraction:YES];
+    
     // start the search
     EtsyClient *etsyClient = [[EtsyClient alloc] init];
     etsyClient.delegate = self;
@@ -47,6 +54,17 @@
     [etsyClient getResultsForKeywords:searchString];
     
     // when results are returned, show the new nib
+}
+
+- (void)pauseInteraction:(BOOL)paused
+{
+    self.searchField.enabled = !paused;
+    self.searchButton.enabled = !paused;
+    
+    if (paused)
+        [self.activityIndicator startAnimating];
+    else
+        [self.activityIndicator stopAnimating];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,14 +77,37 @@
 - (void)etsyResultsReturned:(EtsyClient *)etsyClient
 {
     // give the client to the new results nib
+    ResultsTableViewController *resultsTableViewController = [[ResultsTableViewController alloc] init];
+    resultsTableViewController.etsyClient = etsyClient;
     
     // present the nib
+    [self.navigationController pushViewController:resultsTableViewController animated:YES];
+    
+    [self pauseInteraction:NO];
     
 }
 
 - (void)errorGettingEtsyResults:(EtsyClient *)etsyClient
 {
     // tell the user
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"It looks like something went wrong. Please try again."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+    [alertView show];
+    [self pauseInteraction:NO];
+}
+
+- (void)noEtsyResults:(EtsyClient *)etsyClient
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"That search didn't return any active listings. Try different keywords."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+    [alertView show];
+    [self pauseInteraction:NO];
 }
 
 @end

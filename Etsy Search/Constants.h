@@ -13,6 +13,7 @@ extern NSString * const kEtsyAPIEndpointActiveListings;
 extern NSString * const kEtsyAPIParameterAPIKey;
 extern NSString * const kEtsyAPIParameterIncludes;
 extern NSString * const kEtsyAPIParameterKeywords;
+extern NSString * const kEtsyAPIParameterOffset;
 extern NSString * const kEtsyAPIValueMainImage;
 
 extern NSString * const kEtsyKeystring;

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		072B8AA31F0B6F219E143E90 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E895FD55039B1FC1E4CD77 /* libPods.a */; };
+		8127F6D91A36BDD0008D0114 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */; };
+		8127F6DA1A36BDD0008D0114 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8127F6D81A36BDD0008D0114 /* ResultTableViewCell.xib */; };
+		8127F6DE1A36D21F008D0114 /* LoadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127F6DC1A36D21F008D0114 /* LoadingTableViewCell.m */; };
+		8127F6DF1A36D21F008D0114 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8127F6DD1A36D21F008D0114 /* LoadingTableViewCell.xib */; };
 		8130206F1A34F1F900D3321A /* EtsyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8130206E1A34F1F900D3321A /* EtsyClient.m */; };
 		813020721A34F21F00D3321A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 813020711A34F21F00D3321A /* Constants.m */; };
 		815CB0AC1A34F0FA00E68F21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0AB1A34F0FA00E68F21 /* main.m */; };
@@ -35,6 +39,12 @@
 		0B071C3B64E2431D8897AD7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		44C4C0EA368161227695340C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		70E895FD55039B1FC1E4CD77 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8127F6D61A36BDD0008D0114 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultTableViewCell.h; path = "View Controllers/ResultTableViewCell.h"; sourceTree = "<group>"; };
+		8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultTableViewCell.m; path = "View Controllers/ResultTableViewCell.m"; sourceTree = "<group>"; };
+		8127F6D81A36BDD0008D0114 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultTableViewCell.xib; path = "View Controllers/ResultTableViewCell.xib"; sourceTree = "<group>"; };
+		8127F6DB1A36D21F008D0114 /* LoadingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingTableViewCell.h; path = "View Controllers/LoadingTableViewCell.h"; sourceTree = "<group>"; };
+		8127F6DC1A36D21F008D0114 /* LoadingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingTableViewCell.m; path = "View Controllers/LoadingTableViewCell.m"; sourceTree = "<group>"; };
+		8127F6DD1A36D21F008D0114 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingTableViewCell.xib; path = "View Controllers/LoadingTableViewCell.xib"; sourceTree = "<group>"; };
 		8130206D1A34F1F900D3321A /* EtsyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EtsyClient.h; path = "API Clients/EtsyClient.h"; sourceTree = "<group>"; };
 		8130206E1A34F1F900D3321A /* EtsyClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EtsyClient.m; path = "API Clients/EtsyClient.m"; sourceTree = "<group>"; };
 		813020701A34F21F00D3321A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -95,6 +105,12 @@
 				81B597BA1A35320A0098ADF3 /* ResultsTableViewController.h */,
 				81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */,
 				81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */,
+				8127F6D61A36BDD0008D0114 /* ResultTableViewCell.h */,
+				8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */,
+				8127F6D81A36BDD0008D0114 /* ResultTableViewCell.xib */,
+				8127F6DB1A36D21F008D0114 /* LoadingTableViewCell.h */,
+				8127F6DC1A36D21F008D0114 /* LoadingTableViewCell.m */,
+				8127F6DD1A36D21F008D0114 /* LoadingTableViewCell.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -261,6 +277,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8127F6DF1A36D21F008D0114 /* LoadingTableViewCell.xib in Resources */,
+				8127F6DA1A36BDD0008D0114 /* ResultTableViewCell.xib in Resources */,
 				81B597BE1A35320A0098ADF3 /* ResultsTableViewController.xib in Resources */,
 				815CB0BA1A34F0FA00E68F21 /* LaunchScreen.xib in Resources */,
 				815CB0B71A34F0FA00E68F21 /* Images.xcassets in Resources */,
@@ -317,9 +335,11 @@
 			files = (
 				813020721A34F21F00D3321A /* Constants.m in Sources */,
 				815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */,
+				8127F6DE1A36D21F008D0114 /* LoadingTableViewCell.m in Sources */,
 				81B597BD1A35320A0098ADF3 /* ResultsTableViewController.m in Sources */,
 				815CB0AC1A34F0FA00E68F21 /* main.m in Sources */,
 				81B597B31A351E960098ADF3 /* SearchViewController.m in Sources */,
+				8127F6D91A36BDD0008D0114 /* ResultTableViewCell.m in Sources */,
 				8130206F1A34F1F900D3321A /* EtsyClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
