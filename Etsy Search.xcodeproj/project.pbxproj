@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		072B8AA31F0B6F219E143E90 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E895FD55039B1FC1E4CD77 /* libPods.a */; };
+		69A418F71A9077A900ADF761 /* ResultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A418F51A9077A900ADF761 /* ResultDetailViewController.m */; };
+		69A418F81A9077A900ADF761 /* ResultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69A418F61A9077A900ADF761 /* ResultDetailViewController.xib */; };
 		8127F6D91A36BDD0008D0114 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */; };
 		8127F6DA1A36BDD0008D0114 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8127F6D81A36BDD0008D0114 /* ResultTableViewCell.xib */; };
 		8127F6DE1A36D21F008D0114 /* LoadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127F6DC1A36D21F008D0114 /* LoadingTableViewCell.m */; };
@@ -38,6 +40,9 @@
 /* Begin PBXFileReference section */
 		0B071C3B64E2431D8897AD7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		44C4C0EA368161227695340C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		69A418F41A9077A900ADF761 /* ResultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultDetailViewController.h; path = "View Controllers/ResultDetailViewController.h"; sourceTree = "<group>"; };
+		69A418F51A9077A900ADF761 /* ResultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultDetailViewController.m; path = "View Controllers/ResultDetailViewController.m"; sourceTree = "<group>"; };
+		69A418F61A9077A900ADF761 /* ResultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultDetailViewController.xib; path = "View Controllers/ResultDetailViewController.xib"; sourceTree = "<group>"; };
 		70E895FD55039B1FC1E4CD77 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		8127F6D61A36BDD0008D0114 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultTableViewCell.h; path = "View Controllers/ResultTableViewCell.h"; sourceTree = "<group>"; };
 		8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultTableViewCell.m; path = "View Controllers/ResultTableViewCell.m"; sourceTree = "<group>"; };
@@ -111,6 +116,9 @@
 				8127F6DB1A36D21F008D0114 /* LoadingTableViewCell.h */,
 				8127F6DC1A36D21F008D0114 /* LoadingTableViewCell.m */,
 				8127F6DD1A36D21F008D0114 /* LoadingTableViewCell.xib */,
+				69A418F41A9077A900ADF761 /* ResultDetailViewController.h */,
+				69A418F51A9077A900ADF761 /* ResultDetailViewController.m */,
+				69A418F61A9077A900ADF761 /* ResultDetailViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -277,6 +285,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69A418F81A9077A900ADF761 /* ResultDetailViewController.xib in Resources */,
 				8127F6DF1A36D21F008D0114 /* LoadingTableViewCell.xib in Resources */,
 				8127F6DA1A36BDD0008D0114 /* ResultTableViewCell.xib in Resources */,
 				81B597BE1A35320A0098ADF3 /* ResultsTableViewController.xib in Resources */,
@@ -336,6 +345,7 @@
 				813020721A34F21F00D3321A /* Constants.m in Sources */,
 				815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */,
 				8127F6DE1A36D21F008D0114 /* LoadingTableViewCell.m in Sources */,
+				69A418F71A9077A900ADF761 /* ResultDetailViewController.m in Sources */,
 				81B597BD1A35320A0098ADF3 /* ResultsTableViewController.m in Sources */,
 				815CB0AC1A34F0FA00E68F21 /* main.m in Sources */,
 				81B597B31A351E960098ADF3 /* SearchViewController.m in Sources */,
