@@ -52,7 +52,6 @@ NSString * const loadingCellIdentifier = @"loadingIdentifier";
 {
     // reload the table to pull the new data
     [self.tableView reloadData];
-    
 }
 
 - (void)errorGettingEtsyResults:(EtsyClient *)etsyClient
@@ -63,6 +62,18 @@ NSString * const loadingCellIdentifier = @"loadingIdentifier";
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles: nil];
     [alertView show];
+}
+
+- (void)noEtsyResults:(EtsyClient *)etsyClient
+{
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
+                                                        message:@"This search no longer returns results. Please try a different search."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles: nil];
+    [alertView show];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
