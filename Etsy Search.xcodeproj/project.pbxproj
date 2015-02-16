@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		072B8AA31F0B6F219E143E90 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E895FD55039B1FC1E4CD77 /* libPods.a */; };
+		69A418F71A9077A900ADF761 /* ResultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A418F51A9077A900ADF761 /* ResultDetailViewController.m */; };
+		69A418F81A9077A900ADF761 /* ResultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69A418F61A9077A900ADF761 /* ResultDetailViewController.xib */; };
+		8127F6D91A36BDD0008D0114 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */; };
+		8127F6DA1A36BDD0008D0114 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8127F6D81A36BDD0008D0114 /* ResultTableViewCell.xib */; };
+		8127F6DE1A36D21F008D0114 /* LoadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127F6DC1A36D21F008D0114 /* LoadingTableViewCell.m */; };
+		8127F6DF1A36D21F008D0114 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8127F6DD1A36D21F008D0114 /* LoadingTableViewCell.xib */; };
+		8130206F1A34F1F900D3321A /* EtsyClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 8130206E1A34F1F900D3321A /* EtsyClient.m */; };
+		813020721A34F21F00D3321A /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 813020711A34F21F00D3321A /* Constants.m */; };
 		815CB0AC1A34F0FA00E68F21 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0AB1A34F0FA00E68F21 /* main.m */; };
 		815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0AE1A34F0FA00E68F21 /* AppDelegate.m */; };
-		815CB0B21A34F0FA00E68F21 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0B11A34F0FA00E68F21 /* ViewController.m */; };
-		815CB0B51A34F0FA00E68F21 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815CB0B31A34F0FA00E68F21 /* Main.storyboard */; };
 		815CB0B71A34F0FA00E68F21 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815CB0B61A34F0FA00E68F21 /* Images.xcassets */; };
 		815CB0BA1A34F0FA00E68F21 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 815CB0B81A34F0FA00E68F21 /* LaunchScreen.xib */; };
 		815CB0C61A34F0FA00E68F21 /* Etsy_SearchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815CB0C51A34F0FA00E68F21 /* Etsy_SearchTests.m */; };
+		81B597B31A351E960098ADF3 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B597B11A351E960098ADF3 /* SearchViewController.m */; };
+		81B597B41A351E960098ADF3 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B597B21A351E960098ADF3 /* SearchViewController.xib */; };
+		81B597BD1A35320A0098ADF3 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */; };
+		81B597BE1A35320A0098ADF3 /* ResultsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +38,40 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B071C3B64E2431D8897AD7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		44C4C0EA368161227695340C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		69A418F41A9077A900ADF761 /* ResultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultDetailViewController.h; path = "View Controllers/ResultDetailViewController.h"; sourceTree = "<group>"; };
+		69A418F51A9077A900ADF761 /* ResultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultDetailViewController.m; path = "View Controllers/ResultDetailViewController.m"; sourceTree = "<group>"; };
+		69A418F61A9077A900ADF761 /* ResultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultDetailViewController.xib; path = "View Controllers/ResultDetailViewController.xib"; sourceTree = "<group>"; };
+		69C2D6351A918E52000BF215 /* Defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		70E895FD55039B1FC1E4CD77 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8127F6D61A36BDD0008D0114 /* ResultTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultTableViewCell.h; path = "View Controllers/ResultTableViewCell.h"; sourceTree = "<group>"; };
+		8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultTableViewCell.m; path = "View Controllers/ResultTableViewCell.m"; sourceTree = "<group>"; };
+		8127F6D81A36BDD0008D0114 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultTableViewCell.xib; path = "View Controllers/ResultTableViewCell.xib"; sourceTree = "<group>"; };
+		8127F6DB1A36D21F008D0114 /* LoadingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoadingTableViewCell.h; path = "View Controllers/LoadingTableViewCell.h"; sourceTree = "<group>"; };
+		8127F6DC1A36D21F008D0114 /* LoadingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LoadingTableViewCell.m; path = "View Controllers/LoadingTableViewCell.m"; sourceTree = "<group>"; };
+		8127F6DD1A36D21F008D0114 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoadingTableViewCell.xib; path = "View Controllers/LoadingTableViewCell.xib"; sourceTree = "<group>"; };
+		8130206D1A34F1F900D3321A /* EtsyClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EtsyClient.h; path = "API Clients/EtsyClient.h"; sourceTree = "<group>"; };
+		8130206E1A34F1F900D3321A /* EtsyClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EtsyClient.m; path = "API Clients/EtsyClient.m"; sourceTree = "<group>"; };
+		813020701A34F21F00D3321A /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		813020711A34F21F00D3321A /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		815CB0A61A34F0FA00E68F21 /* Etsy Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Etsy Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815CB0AA1A34F0FA00E68F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815CB0AB1A34F0FA00E68F21 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		815CB0AD1A34F0FA00E68F21 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815CB0AE1A34F0FA00E68F21 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		815CB0B01A34F0FA00E68F21 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		815CB0B11A34F0FA00E68F21 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		815CB0B41A34F0FA00E68F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		815CB0B61A34F0FA00E68F21 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		815CB0B91A34F0FA00E68F21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		815CB0BF1A34F0FA00E68F21 /* Etsy SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Etsy SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		815CB0C41A34F0FA00E68F21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815CB0C51A34F0FA00E68F21 /* Etsy_SearchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Etsy_SearchTests.m; sourceTree = "<group>"; };
+		81B597B01A351E960098ADF3 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchViewController.h; path = "View Controllers/SearchViewController.h"; sourceTree = "<group>"; };
+		81B597B11A351E960098ADF3 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchViewController.m; path = "View Controllers/SearchViewController.m"; sourceTree = "<group>"; };
+		81B597B21A351E960098ADF3 /* SearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SearchViewController.xib; path = "View Controllers/SearchViewController.xib"; sourceTree = "<group>"; };
+		81B597BA1A35320A0098ADF3 /* ResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultsTableViewController.h; path = "View Controllers/ResultsTableViewController.h"; sourceTree = "<group>"; };
+		81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsTableViewController.m; path = "View Controllers/ResultsTableViewController.m"; sourceTree = "<group>"; };
+		81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultsTableViewController.xib; path = "View Controllers/ResultsTableViewController.xib"; sourceTree = "<group>"; };
+		81B597BF1A3562D70098ADF3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				072B8AA31F0B6F219E143E90 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +93,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17B4C812F3A2BD28DAC3C7BF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0B071C3B64E2431D8897AD7A /* Pods.debug.xcconfig */,
+				44C4C0EA368161227695340C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8130206B1A34F1D700D3321A /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				81B597B01A351E960098ADF3 /* SearchViewController.h */,
+				81B597B11A351E960098ADF3 /* SearchViewController.m */,
+				81B597B21A351E960098ADF3 /* SearchViewController.xib */,
+				81B597BA1A35320A0098ADF3 /* ResultsTableViewController.h */,
+				81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */,
+				81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */,
+				8127F6D61A36BDD0008D0114 /* ResultTableViewCell.h */,
+				8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */,
+				8127F6D81A36BDD0008D0114 /* ResultTableViewCell.xib */,
+				8127F6DB1A36D21F008D0114 /* LoadingTableViewCell.h */,
+				8127F6DC1A36D21F008D0114 /* LoadingTableViewCell.m */,
+				8127F6DD1A36D21F008D0114 /* LoadingTableViewCell.xib */,
+				69A418F41A9077A900ADF761 /* ResultDetailViewController.h */,
+				69A418F51A9077A900ADF761 /* ResultDetailViewController.m */,
+				69A418F61A9077A900ADF761 /* ResultDetailViewController.xib */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		8130206C1A34F1DE00D3321A /* API Clients */ = {
+			isa = PBXGroup;
+			children = (
+				8130206D1A34F1F900D3321A /* EtsyClient.h */,
+				8130206E1A34F1F900D3321A /* EtsyClient.m */,
+			);
+			name = "API Clients";
+			sourceTree = "<group>";
+		};
 		815CB09D1A34F0FA00E68F21 = {
 			isa = PBXGroup;
 			children = (
 				815CB0A81A34F0FA00E68F21 /* Etsy Search */,
 				815CB0C21A34F0FA00E68F21 /* Etsy SearchTests */,
 				815CB0A71A34F0FA00E68F21 /* Products */,
+				17B4C812F3A2BD28DAC3C7BF /* Pods */,
+				E014BB88D8DF13686276A3DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,9 +158,8 @@
 			children = (
 				815CB0AD1A34F0FA00E68F21 /* AppDelegate.h */,
 				815CB0AE1A34F0FA00E68F21 /* AppDelegate.m */,
-				815CB0B01A34F0FA00E68F21 /* ViewController.h */,
-				815CB0B11A34F0FA00E68F21 /* ViewController.m */,
-				815CB0B31A34F0FA00E68F21 /* Main.storyboard */,
+				8130206C1A34F1DE00D3321A /* API Clients */,
+				8130206B1A34F1D700D3321A /* View Controllers */,
 				815CB0B61A34F0FA00E68F21 /* Images.xcassets */,
 				815CB0B81A34F0FA00E68F21 /* LaunchScreen.xib */,
 				815CB0A91A34F0FA00E68F21 /* Supporting Files */,
@@ -97,7 +171,11 @@
 			isa = PBXGroup;
 			children = (
 				815CB0AA1A34F0FA00E68F21 /* Info.plist */,
+				813020701A34F21F00D3321A /* Constants.h */,
+				813020711A34F21F00D3321A /* Constants.m */,
+				69C2D6351A918E52000BF215 /* Defines.h */,
 				815CB0AB1A34F0FA00E68F21 /* main.m */,
+				81B597BF1A3562D70098ADF3 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -119,6 +197,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E014BB88D8DF13686276A3DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70E895FD55039B1FC1E4CD77 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 815CB0C91A34F0FA00E68F21 /* Build configuration list for PBXNativeTarget "Etsy Search" */;
 			buildPhases = (
+				24080AFC8BEFEB6E36A3499D /* Check Pods Manifest.lock */,
 				815CB0A21A34F0FA00E68F21 /* Sources */,
 				815CB0A31A34F0FA00E68F21 /* Frameworks */,
 				815CB0A41A34F0FA00E68F21 /* Resources */,
+				CDB6AE57F871C4D0C2B961F6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +287,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815CB0B51A34F0FA00E68F21 /* Main.storyboard in Resources */,
+				69A418F81A9077A900ADF761 /* ResultDetailViewController.xib in Resources */,
+				8127F6DF1A36D21F008D0114 /* LoadingTableViewCell.xib in Resources */,
+				8127F6DA1A36BDD0008D0114 /* ResultTableViewCell.xib in Resources */,
+				81B597BE1A35320A0098ADF3 /* ResultsTableViewController.xib in Resources */,
 				815CB0BA1A34F0FA00E68F21 /* LaunchScreen.xib in Resources */,
 				815CB0B71A34F0FA00E68F21 /* Images.xcassets in Resources */,
+				81B597B41A351E960098ADF3 /* SearchViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,14 +306,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24080AFC8BEFEB6E36A3499D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CDB6AE57F871C4D0C2B961F6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		815CB0A21A34F0FA00E68F21 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815CB0B21A34F0FA00E68F21 /* ViewController.m in Sources */,
+				813020721A34F21F00D3321A /* Constants.m in Sources */,
 				815CB0AF1A34F0FA00E68F21 /* AppDelegate.m in Sources */,
+				8127F6DE1A36D21F008D0114 /* LoadingTableViewCell.m in Sources */,
+				69A418F71A9077A900ADF761 /* ResultDetailViewController.m in Sources */,
+				81B597BD1A35320A0098ADF3 /* ResultsTableViewController.m in Sources */,
 				815CB0AC1A34F0FA00E68F21 /* main.m in Sources */,
+				81B597B31A351E960098ADF3 /* SearchViewController.m in Sources */,
+				8127F6D91A36BDD0008D0114 /* ResultTableViewCell.m in Sources */,
+				8130206F1A34F1F900D3321A /* EtsyClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +375,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		815CB0B31A34F0FA00E68F21 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				815CB0B41A34F0FA00E68F21 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		815CB0B81A34F0FA00E68F21 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -286,6 +409,8 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Etsy Search/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -326,6 +451,8 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Etsy Search/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -341,6 +468,7 @@
 		};
 		815CB0CA1A34F0FA00E68F21 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B071C3B64E2431D8897AD7A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Etsy Search/Info.plist";
@@ -351,6 +479,7 @@
 		};
 		815CB0CB1A34F0FA00E68F21 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44C4C0EA368161227695340C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Etsy Search/Info.plist";
@@ -412,6 +541,7 @@
 				815CB0CB1A34F0FA00E68F21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		815CB0CC1A34F0FA00E68F21 /* Build configuration list for PBXNativeTarget "Etsy SearchTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +550,7 @@
 				815CB0CE1A34F0FA00E68F21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

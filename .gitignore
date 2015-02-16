@@ -1,0 +1,41 @@
+# gitignore pieces from: https://github.com/github/gitignore
+
+# Global OSX
+.DS_Store
+.DS_Store?
+.LSOverride
+
+# Thumbnails
+ehthumbs.db
+Thumbs.db
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# SVN
+.svn/
+
+# Xcode/AppCode
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+!default.xcworkspace
+*.xcuserdata
+xcuserdata
+*.moved-aside
+DerivedData
+build.output
+pkg
+*.hmap
+.idea/
+
+*/iOSInjectionProject/*
+compile_commands.json
