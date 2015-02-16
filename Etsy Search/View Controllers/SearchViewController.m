@@ -41,6 +41,14 @@
 
 - (IBAction)search
 {
+    NSString *searchString = [self.searchField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    if ([searchString isEqualToString:@""]) {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Oops!" message:@"Looks like you didn't enter anything in the search field. Please enter your query and tap the Search button again." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alertView show];
+        return;
+    }
+    
     // block user interaction
     [self.view endEditing:YES];
     [self pauseInteraction:YES];
@@ -48,8 +56,6 @@
     // start the search
     EtsyClient *etsyClient = [[EtsyClient alloc] init];
     etsyClient.delegate = self;
-    
-    NSString *searchString = [self.searchField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
     [etsyClient getResultsForKeywords:searchString];
     

@@ -166,6 +166,11 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
 
 #pragma mark - Table view delegate
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 60;
+}
+
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -193,7 +198,7 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
     
     if (scrollView.isDragging) {
         CGFloat thresholdToRelease = self.loadingCell.frame.origin.y - scrollView.bounds.size.height;
-        CGFloat thresholdToLoad = thresholdToRelease + self.loadingCell.frame.size.height;
+        CGFloat thresholdToLoad = thresholdToRelease + self.loadingCell.frame.size.height + 1;
         
         if (([scrollView contentOffset].y >= thresholdToRelease) && ([scrollView contentOffset].y < thresholdToLoad)) {
             [self.loadingCell reset];
@@ -213,7 +218,7 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
             
             [self.loadingCell startLoading];
             
-            /*
+            /* unnecessary since the loading view is a table view cell
             [UIView beginAnimations:nil context:NULL];
             [UIView setAnimationDuration:0.5];
             [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, [self.loadingCell frame].size.height, 0)];
