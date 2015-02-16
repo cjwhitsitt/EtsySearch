@@ -1,4 +1,4 @@
-    //
+//
 //  ResultsTableViewController.m
 //  Etsy Search
 //
@@ -16,12 +16,15 @@
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 @property (nonatomic, strong) UIAlertView *openEtsyAlertView;
 
+@property (nonatomic, weak) LoadingTableViewCell *loadingCell;
+@property (nonatomic, getter=isMoreDataLoading) BOOL moreDataIsLoading;
+
 @end
 
 @implementation ResultsTableViewController
 
-NSString * const defaultCellIdentifier = @"resultIdentifier";
-NSString * const loadingCellIdentifier = @"loadingIdentifier";
+NSString * const kDefaultCellIdentifier = @"resultIdentifier";
+NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,8 +38,8 @@ NSString * const loadingCellIdentifier = @"loadingIdentifier";
     // take over delegate methods
     self.etsyClient.delegate = self;
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"ResultTableViewCell" bundle:nil] forCellReuseIdentifier:defaultCellIdentifier];
-    [self.tableView registerNib:[UINib nibWithNibName:@"LoadingTableViewCell" bundle:nil] forCellReuseIdentifier:loadingCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ResultTableViewCell" bundle:nil] forCellReuseIdentifier:kDefaultCellIdentifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LoadingTableViewCell" bundle:nil] forCellReuseIdentifier:kLoadingCellIdentifier];
     
     self.title = @"Search Results";
 }
@@ -73,6 +76,7 @@ NSString * const loadingCellIdentifier = @"loadingIdentifier";
                                               otherButtonTitles: nil];
     [alertView show];
     
+    // exit results since nothing was returned
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -100,15 +104,16 @@ NSString * const loadingCellIdentifier = @"loadingIdentifier";
     
     NSString *cellIdentifier = nil;
     if (isLoadingCell)
-        cellIdentifier = loadingCellIdentifier;
+        cellIdentifier = kLoadingCellIdentifier;
     else
-        cellIdentifier = defaultCellIdentifier;
+        cellIdentifier = kDefaultCellIdentifier;
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (isLoadingCell) {
-        // get the next batch
-        [self.etsyClient nextPage];
+        // save the pointer so we can make the pull to refresh happen
+        self.loadingCell = (LoadingTableViewCell *)cell;
+        [self.loadingCell reset];
         
     } else {
         EtsyListing *listing = self.etsyClient.listings[indexPath.row];
@@ -138,6 +143,49 @@ NSString * const loadingCellIdentifier = @"loadingIdentifier";
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+#pragma mark - Scroll view delegate
+
+// Since UITableView is a subclass of UIScrollView, this will be called if this class is the table view's delegate
+
+// http://stackoverflow.com/questions/7684441/iphone-projects-needs-pull-up-to-refresh-feature
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if (!self.loadingCell) return;
+    
+    if (scrollView.isDragging) {
+        CGFloat thresholdToRelease = self.loadingCell.frame.origin.y - scrollView.bounds.size.height;
+        CGFloat thresholdToLoad = thresholdToRelease + self.loadingCell.frame.size.height;
+        
+        if (([scrollView contentOffset].y >= thresholdToRelease) && ([scrollView contentOffset].y < thresholdToLoad)) {
+            [self.loadingCell reset];
+        } else if ([scrollView contentOffset].y >= thresholdToLoad) {
+            [self.loadingCell indicateThresholdReached];
+        }
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    if (!self.loadingCell) return;
+    
+    CGFloat thresholdToAction = [self.loadingCell frame].origin.y + [self.loadingCell frame].size.height - [scrollView bounds].size.height;
+    
+    if ([scrollView contentOffset].y >= thresholdToAction) {
+        if (!self.isMoreDataLoading) {
+            
+            [self.loadingCell startLoading];
+            
+            [UIView beginAnimations:nil context:NULL];
+            [UIView setAnimationDuration:0.5];
+            [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, [self.loadingCell frame].size.height, 0)];
+            [UIView commitAnimations];
+            
+            /* do your things here */
+            [self.etsyClient nextPage];
+            
+            self.moreDataIsLoading = YES;
+        }
+    }
 }
 
 #pragma mark - UIAlertView delegate
