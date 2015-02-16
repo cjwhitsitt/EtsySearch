@@ -17,7 +17,6 @@
 @property (nonatomic, strong) UIAlertView *openEtsyAlertView;
 
 @property (nonatomic) BOOL loadingCellExists;
-//@property (nonatomic, weak) LoadingTableViewCell *loadingCell;
 @property (nonatomic, getter=isMoreDataLoading) BOOL moreDataIsLoading;
 
 @end
