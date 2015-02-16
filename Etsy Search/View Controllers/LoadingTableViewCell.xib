@@ -14,12 +14,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiJ-uV-HIT">
-                        <rect key="frame" x="15" y="11" width="76.5" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="lZ4-2V-Jki">
                         <rect key="frame" x="285" y="12" width="20" height="20"/>
                         <constraints>
@@ -33,33 +27,19 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let go to load more" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dT7-k4-ZH1">
-                        <rect key="frame" x="8" y="8.5" width="304" height="27.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="dT7-k4-ZH1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="4ih-dS-4U6"/>
-                    <constraint firstAttribute="centerY" secondItem="jiJ-uV-HIT" secondAttribute="centerY" id="G52-VK-2DR"/>
-                    <constraint firstItem="jiJ-uV-HIT" firstAttribute="centerY" secondItem="lZ4-2V-Jki" secondAttribute="centerY" constant="-0.5" id="Ihn-7x-4EF"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="dT7-k4-ZH1" secondAttribute="bottom" id="Rg3-Um-8AJ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="kiG-ao-6wC" secondAttribute="bottom" id="S4L-AL-VFh"/>
                     <constraint firstAttribute="trailing" secondItem="lZ4-2V-Jki" secondAttribute="trailing" constant="15" id="V45-Tu-Scd"/>
-                    <constraint firstItem="dT7-k4-ZH1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Vqt-DL-pvp"/>
-                    <constraint firstItem="dT7-k4-ZH1" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="j97-ZC-D38"/>
                     <constraint firstItem="kiG-ao-6wC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="lcF-0e-psx"/>
                     <constraint firstItem="kiG-ao-6wC" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="mdA-y9-r61"/>
-                    <constraint firstItem="jiJ-uV-HIT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="tJE-40-fq3"/>
+                    <constraint firstAttribute="centerY" secondItem="lZ4-2V-Jki" secondAttribute="centerY" id="wc0-1i-S7N"/>
                     <constraint firstItem="kiG-ao-6wC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="whN-hS-qhx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="activityIndicator" destination="lZ4-2V-Jki" id="T1D-Iq-KWw"/>
-                <outlet property="letGoInstructionlabel" destination="dT7-k4-ZH1" id="Gix-Fn-Ccb"/>
-                <outlet property="loadingLabel" destination="jiJ-uV-HIT" id="g4c-GY-qIu"/>
-                <outlet property="pullDownInstructionLabel" destination="kiG-ao-6wC" id="oqj-fj-70G"/>
+                <outlet property="instructionLabel" destination="kiG-ao-6wC" id="vko-w1-9NC"/>
             </connections>
             <point key="canvasLocation" x="242" y="187"/>
         </tableViewCell>
