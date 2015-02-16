@@ -28,6 +28,7 @@
 - (void)indicateThresholdReached
 {
     self.instructionLabel.text = @"Let go to learn more";
+    [self.activityIndicator stopAnimating];
 }
 
 - (void)startLoading
