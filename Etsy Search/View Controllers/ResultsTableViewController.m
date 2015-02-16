@@ -16,7 +16,8 @@
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 @property (nonatomic, strong) UIAlertView *openEtsyAlertView;
 
-@property (nonatomic, weak) LoadingTableViewCell *loadingCell;
+@property (nonatomic) BOOL loadingCellExists;
+//@property (nonatomic, weak) LoadingTableViewCell *loadingCell;
 @property (nonatomic, getter=isMoreDataLoading) BOOL moreDataIsLoading;
 
 @end
@@ -42,6 +43,21 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
     [self.tableView registerNib:[UINib nibWithNibName:@"LoadingTableViewCell" bundle:nil] forCellReuseIdentifier:kLoadingCellIdentifier];
     
     self.title = @"Search Results";
+    
+    self.loadingCellExists = ([self.etsyClient.listings count] < self.etsyClient.totalListings);
+}
+
+- (LoadingTableViewCell *)loadingCell
+{
+    LoadingTableViewCell *loadingCell = nil;
+    
+    if (self.loadingCellExists) {
+        NSInteger row = [self.etsyClient.listings count];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+        loadingCell = (LoadingTableViewCell *)[self.tableView cellForRowAtIndexPath:indexPath];
+    }
+    
+    return loadingCell;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -53,8 +69,33 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
 
 - (void)etsyResultsReturned:(EtsyClient *)etsyClient
 {
+    BOOL loadingCellShouldExist = ([self.etsyClient.listings count] < self.etsyClient.totalListings);
+    
+    // what new rows should be added?
+    NSInteger firstRowToInsert = [self.tableView numberOfRowsInSection:0] - 1; // update the loadingCell too
+    NSInteger lastRowToInsert = [self.etsyClient.listings count] - 1;
+    
+    NSMutableArray *indexPathsMutableArray = [[NSMutableArray alloc] init];
+    for (NSInteger i = firstRowToInsert; i <= lastRowToInsert; i++) {
+        [indexPathsMutableArray addObject:[NSIndexPath indexPathForRow:i inSection:0]];
+    }
+    
     // reload the table to pull the new data
-    [self.tableView reloadData];
+    [self.tableView beginUpdates];
+    
+    if (self.loadingCellExists && !loadingCellShouldExist) {
+        NSArray *indexPathsToDelete = @[[NSIndexPath indexPathForRow:[self.tableView numberOfRowsInSection:0] inSection:0]];
+        [self.tableView deleteRowsAtIndexPaths:indexPathsToDelete withRowAnimation:UITableViewRowAnimationAutomatic];
+    }
+    [self.tableView insertRowsAtIndexPaths:indexPathsMutableArray withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    [self.tableView endUpdates];
+    
+    self.loadingCellExists = loadingCellShouldExist;
+    
+    // reset the loading cell
+    self.moreDataIsLoading = NO;
+    [self.loadingCell reset];
 }
 
 - (void)errorGettingEtsyResults:(EtsyClient *)etsyClient
@@ -111,9 +152,7 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     if (isLoadingCell) {
-        // save the pointer so we can make the pull to refresh happen
-        self.loadingCell = (LoadingTableViewCell *)cell;
-        [self.loadingCell reset];
+        // nothing to do here
         
     } else {
         EtsyListing *listing = self.etsyClient.listings[indexPath.row];
@@ -175,10 +214,12 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
             
             [self.loadingCell startLoading];
             
+            /*
             [UIView beginAnimations:nil context:NULL];
             [UIView setAnimationDuration:0.5];
             [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, [self.loadingCell frame].size.height, 0)];
             [UIView commitAnimations];
+             */
             
             /* do your things here */
             [self.etsyClient nextPage];

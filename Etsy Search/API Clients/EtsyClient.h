@@ -36,7 +36,6 @@
 @property (nonatomic, weak) id<EtsyClientDelegate> delegate;
 
 @property (nonatomic) NSInteger totalListings;
-@property (nonatomic) NSInteger listingsDownloaded;
 @property (nonatomic, strong) NSArray *listings; // Array of EtsyListing objects
 @property (nonatomic, readonly) NSString *keywords;
 

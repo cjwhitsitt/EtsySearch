@@ -122,7 +122,7 @@
 
 - (void)appendResultsFromDictionary:(NSDictionary *)dictionary
 {
-    NSMutableArray *mutableListings = [NSMutableArray arrayWithArray:self.listings];
+    NSMutableArray *mutableListings = [self.listings mutableCopy];
     
     for (NSDictionary *listing in dictionary) {
         EtsyListing *etsyListing = [[EtsyListing alloc] init];
