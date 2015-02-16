@@ -39,6 +39,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    self.title = @"Listing";
+    
     if (!self.listing) {
         // this shouldn't happen - there should be some defensive coding here
         return;
