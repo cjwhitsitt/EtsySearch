@@ -16,7 +16,6 @@
 @interface ResultsTableViewController ()
 
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
-@property (nonatomic, strong) UIAlertView *openEtsyAlertView;
 
 @property (nonatomic) BOOL loadingCellExists;
 @property (nonatomic, getter=isMoreDataLoading) BOOL moreDataIsLoading;
@@ -181,17 +180,6 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
         
         ResultDetailViewController *resultDetailViewController = [[ResultDetailViewController alloc] initWithEtsyListing:listing];
         [self.navigationController pushViewController:resultDetailViewController animated:YES];
-        
-        /*
-        self.selectedIndexPath = indexPath;
-        
-        self.openEtsyAlertView = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"Do you want to view this product on Etsy.com"
-                                                           delegate:self
-                                                  cancelButtonTitle:@"No"
-                                                  otherButtonTitles:@"Take me to Etsy.com", nil];
-        [self.openEtsyAlertView show];
-         */
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -226,30 +214,10 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
         if (!self.isMoreDataLoading) {
             
             [self.loadingCell startLoading];
-            
-            /* unnecessary since the loading view is a table view cell
-            [UIView beginAnimations:nil context:NULL];
-            [UIView setAnimationDuration:0.5];
-            [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, [self.loadingCell frame].size.height, 0)];
-            [UIView commitAnimations];
-             */
-            
-            /* do your things here */
             [self.etsyClient nextPage];
             
             self.moreDataIsLoading = YES;
         }
-    }
-}
-
-#pragma mark - UIAlertView delegate
-
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if (alertView == self.openEtsyAlertView && buttonIndex > 0) {
-        // open Etsy
-        EtsyListing *listing = self.etsyClient.listings[self.selectedIndexPath.row];
-        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:listing.url]];
     }
 }
 
