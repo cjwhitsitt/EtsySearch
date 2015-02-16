@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) EtsyListing *listing;
 
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+
 @property (weak, nonatomic) IBOutlet UIImageView *listingImage;
 @property (weak, nonatomic) IBOutlet UILabel *listingTitle;
 @property (weak, nonatomic) IBOutlet UILabel *listingPrice;
@@ -26,12 +28,8 @@
     self = [super init];
     
     if (self) {
-        EtsyListing *listing = [etsyListing copy];
-        
-        self.listingImage.image = listing.mainImage;
-        self.listingTitle.text = listing.title;
-        self.listingPrice.text = listing.price;
-        self.listingDescription.text = listing.description;
+        //TODO: make this copy-able
+        self.listing = etsyListing;
     }
     
     return self;
@@ -40,6 +38,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    if (!self.listing) {
+        // this shouldn't happen - there should be some defensive coding here
+        return;
+    }
+    
+    self.listingImage.image = self.listing.mainImage;
+    self.listingTitle.text = self.listing.title;
+    self.listingPrice.text = [NSString stringWithFormat:@"$%@", self.listing.price]; //TODO: support multiple currencies using number formatter
+    self.listingDescription.text = self.listing.resultDescription;
+}
+
+- (void)layoutSublayersOfLayer:(CALayer *)layer
+{
+    [super layoutSublayersOfLayer:layer];
+    
+    self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
 }
 
 - (IBAction)viewOnEtsy:(UIButton *)sender

@@ -11,6 +11,8 @@
 #import "ResultTableViewCell.h"
 #import "LoadingTableViewCell.h"
 
+#import "ResultDetailViewController.h"
+
 @interface ResultsTableViewController ()
 
 @property (nonatomic, strong) NSIndexPath *selectedIndexPath;
@@ -175,6 +177,12 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (indexPath.row < [self.etsyClient.listings count]) {
+        EtsyListing *listing = self.etsyClient.listings[self.selectedIndexPath.row];
+        
+        ResultDetailViewController *resultDetailViewController = [[ResultDetailViewController alloc] initWithEtsyListing:listing];
+        [self.navigationController pushViewController:resultDetailViewController animated:YES];
+        
+        /*
         self.selectedIndexPath = indexPath;
         
         self.openEtsyAlertView = [[UIAlertView alloc] initWithTitle:nil
@@ -183,6 +191,7 @@ NSString * const kLoadingCellIdentifier = @"loadingIdentifier";
                                                   cancelButtonTitle:@"No"
                                                   otherButtonTitles:@"Take me to Etsy.com", nil];
         [self.openEtsyAlertView show];
+         */
     }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
