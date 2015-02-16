@@ -6,6 +6,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultDetailViewController">
             <connections>
+                <outlet property="listingDescription" destination="dUK-4H-V6g" id="FaI-SJ-N7U"/>
+                <outlet property="listingImage" destination="qAi-t1-hpI" id="wxH-ON-jps"/>
+                <outlet property="listingPrice" destination="IOw-ie-cea" id="EkD-SX-yO8"/>
+                <outlet property="listingTitle" destination="K03-8i-yhc" id="KMw-Fv-Fwj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,31 +25,34 @@
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K03-8i-yhc">
-                    <rect key="frame" x="8" y="208" width="304" height="19.5"/>
+                    <rect key="frame" x="8" y="208" width="304" height="20"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOw-ie-cea">
-                    <rect key="frame" x="8" y="235.5" width="28.5" height="13.5"/>
+                    <rect key="frame" x="8" y="236" width="29" height="14"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dUK-4H-V6g">
-                    <rect key="frame" x="8" y="257" width="304" height="19.5"/>
+                    <rect key="frame" x="8" y="257" width="304" height="20"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weu-WH-9mo">
-                    <rect key="frame" x="0.0" y="284.5" width="320" height="40"/>
+                    <rect key="frame" x="0.0" y="285" width="320" height="40"/>
                     <color key="backgroundColor" red="0.0" green="0.39826642340000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="Dkh-kl-mwy"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                     <state key="normal" title="View on Etsy"/>
+                    <connections>
+                        <action selector="viewOnEtsy:" destination="-1" eventType="touchUpInside" id="vXs-YC-6RZ"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

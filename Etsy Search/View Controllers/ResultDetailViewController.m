@@ -10,28 +10,46 @@
 
 @interface ResultDetailViewController ()
 
+@property (nonatomic, strong) EtsyListing *listing;
+
+@property (weak, nonatomic) IBOutlet UIImageView *listingImage;
+@property (weak, nonatomic) IBOutlet UILabel *listingTitle;
+@property (weak, nonatomic) IBOutlet UILabel *listingPrice;
+@property (weak, nonatomic) IBOutlet UILabel *listingDescription;
+
 @end
 
 @implementation ResultDetailViewController
+
+- (ResultDetailViewController *)initWithEtsyListing:(EtsyListing *)etsyListing
+{
+    self = [super init];
+    
+    if (self) {
+        EtsyListing *listing = [etsyListing copy];
+        
+        self.listingImage.image = listing.mainImage;
+        self.listingTitle.text = listing.title;
+        self.listingPrice.text = listing.price;
+        self.listingDescription.text = listing.description;
+    }
+    
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
 
+- (IBAction)viewOnEtsy:(UIButton *)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.listing.url]];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

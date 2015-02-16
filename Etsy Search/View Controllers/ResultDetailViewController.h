@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EtsyClient.h"
 
 @interface ResultDetailViewController : UIViewController
+
+- (ResultDetailViewController *)initWithEtsyListing:(EtsyListing *)etsyListing;
 
 @end
