@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		072B8AA31F0B6F219E143E90 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E895FD55039B1FC1E4CD77 /* libPods.a */; };
+		09C5E30B95EF62A1EDB37A81 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82ED149D040C4CD47226F877 /* AVFoundation.framework */; };
+		1648DA1E575A665412C1B0C7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB43FF320F0C1899E12A045C /* SystemConfiguration.framework */; };
+		170AC2F8CA9BE84A8C5758A8 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46DA3123E6E6F69E15839E13 /* AssetsLibrary.framework */; };
+		39E6F00955B55EF0827E8526 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C6F43B97B99FE1B6A6D1462 /* CoreText.framework */; };
+		4D48D86F5217372A87022A61 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F20C32489DA6D16687F434 /* BuddyBuildSDK.framework */; };
+		5E26DE139CB8711C90D734B3 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7FD601FD99820D66252D856 /* CoreTelephony.framework */; };
 		69A418F71A9077A900ADF761 /* ResultDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 69A418F51A9077A900ADF761 /* ResultDetailViewController.m */; };
 		69A418F81A9077A900ADF761 /* ResultDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69A418F61A9077A900ADF761 /* ResultDetailViewController.xib */; };
 		8127F6D91A36BDD0008D0114 /* ResultTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8127F6D71A36BDD0008D0114 /* ResultTableViewCell.m */; };
@@ -25,6 +31,9 @@
 		81B597B41A351E960098ADF3 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B597B21A351E960098ADF3 /* SearchViewController.xib */; };
 		81B597BD1A35320A0098ADF3 /* ResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */; };
 		81B597BE1A35320A0098ADF3 /* ResultsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */; };
+		C2B61CDCA88C1FC2358EDB6B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E54EE850C3FFB0A558993B1 /* CoreMedia.framework */; };
+		C5A5803AAFACB5336D9A4C7A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF9F651D5E1352BFA7520D7 /* QuartzCore.framework */; };
+		DACDBAE7FF94B38634464558 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14E23E24CE3CE526E4A7B5A8 /* CoreVideo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +48,12 @@
 
 /* Begin PBXFileReference section */
 		0B071C3B64E2431D8897AD7A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		14E23E24CE3CE526E4A7B5A8 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		1FF9F651D5E1352BFA7520D7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		27F20C32489DA6D16687F434 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BuddyBuildSDK.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		44C4C0EA368161227695340C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		46DA3123E6E6F69E15839E13 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		4C6F43B97B99FE1B6A6D1462 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		69A418F41A9077A900ADF761 /* ResultDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultDetailViewController.h; path = "View Controllers/ResultDetailViewController.h"; sourceTree = "<group>"; };
 		69A418F51A9077A900ADF761 /* ResultDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultDetailViewController.m; path = "View Controllers/ResultDetailViewController.m"; sourceTree = "<group>"; };
 		69A418F61A9077A900ADF761 /* ResultDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultDetailViewController.xib; path = "View Controllers/ResultDetailViewController.xib"; sourceTree = "<group>"; };
@@ -72,6 +86,10 @@
 		81B597BB1A35320A0098ADF3 /* ResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultsTableViewController.m; path = "View Controllers/ResultsTableViewController.m"; sourceTree = "<group>"; };
 		81B597BC1A35320A0098ADF3 /* ResultsTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultsTableViewController.xib; path = "View Controllers/ResultsTableViewController.xib"; sourceTree = "<group>"; };
 		81B597BF1A3562D70098ADF3 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		82ED149D040C4CD47226F877 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9E54EE850C3FFB0A558993B1 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		B7FD601FD99820D66252D856 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		DB43FF320F0C1899E12A045C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +98,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				072B8AA31F0B6F219E143E90 /* libPods.a in Frameworks */,
+				4D48D86F5217372A87022A61 /* BuddyBuildSDK.framework in Frameworks */,
+				170AC2F8CA9BE84A8C5758A8 /* AssetsLibrary.framework in Frameworks */,
+				39E6F00955B55EF0827E8526 /* CoreText.framework in Frameworks */,
+				5E26DE139CB8711C90D734B3 /* CoreTelephony.framework in Frameworks */,
+				1648DA1E575A665412C1B0C7 /* SystemConfiguration.framework in Frameworks */,
+				C5A5803AAFACB5336D9A4C7A /* QuartzCore.framework in Frameworks */,
+				09C5E30B95EF62A1EDB37A81 /* AVFoundation.framework in Frameworks */,
+				C2B61CDCA88C1FC2358EDB6B /* CoreMedia.framework in Frameworks */,
+				DACDBAE7FF94B38634464558 /* CoreVideo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +228,15 @@
 			isa = PBXGroup;
 			children = (
 				70E895FD55039B1FC1E4CD77 /* libPods.a */,
+				27F20C32489DA6D16687F434 /* BuddyBuildSDK.framework */,
+				46DA3123E6E6F69E15839E13 /* AssetsLibrary.framework */,
+				4C6F43B97B99FE1B6A6D1462 /* CoreText.framework */,
+				B7FD601FD99820D66252D856 /* CoreTelephony.framework */,
+				DB43FF320F0C1899E12A045C /* SystemConfiguration.framework */,
+				1FF9F651D5E1352BFA7520D7 /* QuartzCore.framework */,
+				82ED149D040C4CD47226F877 /* AVFoundation.framework */,
+				9E54EE850C3FFB0A558993B1 /* CoreMedia.framework */,
+				14E23E24CE3CE526E4A7B5A8 /* CoreVideo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -478,6 +514,10 @@
 			baseConfigurationReference = 0B071C3B64E2431D8897AD7A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Etsy Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayw.$(PRODUCT_NAME:rfc1034identifier)";
@@ -490,6 +530,10 @@
 			baseConfigurationReference = 44C4C0EA368161227695340C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Etsy Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jayw.$(PRODUCT_NAME:rfc1034identifier)";
