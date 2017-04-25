@@ -52,10 +52,8 @@
     self.listingDescription.text = self.listing.resultDescription;
 }
 
-- (void)layoutSublayersOfLayer:(CALayer *)layer
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super layoutSublayersOfLayer:layer];
-    
     self.scrollView.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
 }
 
